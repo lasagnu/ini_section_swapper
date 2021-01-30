@@ -11,7 +11,7 @@ arg_parser = argparse.ArgumentParser()
 arg_parser.add_argument('-f', dest='file_path', action='store', nargs=1, type=Path, help='path to file you would like to change')
 arg_parser.add_argument('-o', dest='output_file_path', action='store', nargs=1, type=Path, help='path to output file, if not provided new file with _out suffix will be created', required=False)
 arg_parser.add_argument('-c', dest='seg_to_change', action='append', type=str, nargs='*', required=True,
-                        help='sections to change (i.e. section_name_base->section_name_target')
+                        help='sections to change (i.e. section_name_base:section_name_target)')
 arg_parser.add_argument('--overwrite', dest='overvrite_target_segments', action='store_true', help='once passed it will overwrite the section name in target file with the name from base file, default = off', required=False)
 # parses the arguments
 p = arg_parser.parse_args()
